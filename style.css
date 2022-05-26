@@ -1,8 +1,678 @@
+/* Font GooGle */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 *{
     text-decoration: none;
     list-style: none;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+a, a:hover{
+    text-decoration: none;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+button, select, label, li, span {
+    outline: none;
+    font-family: 'Quicksand', sans-serif;
+}
+
+p {
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Reponsive container */
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .container {
+      max-width: 1200px;
+    }
+  }
+  
+/* Header layout */
+
+.header__banner {
+    background-size: cover;
+    background-image: linear-gradient(to right, #ff6600, hsl(30deg 100% 1% / 20%)), url(./img/banner1.jpg);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: initial;
+    background-attachment: fixed;
+    min-height: 700px;
+
+}
+
+.header__banner-wrap {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 20px;
+    padding: 40px 0 20px 0;
+    align-items: center;
+}
+
+/* Header left */
+
+h1 a.logo-brand {
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+/* Header right */
+
+.header__banner-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.header__banner-right .search-bar {
+    display: flex;
+    flex: 1;
+    margin: 0 auto;
+}
+
+.header__banner-right .search-bar .search .search__input {
+    display: flex;
+    flex: 1;
+    padding: 10px 50px 10px 20px;
+    height: 45px;
+    font-size: 16px;
+    color: rbg(22, 28, 45, 0.7);
+    border: none;
+    font-weight: 400;
+    border-radius: 6px;
+    position: relative;
+    right: 0;
+    background: white;
+    outline: 0;
+    border: 1px solid white;
+}
+
+.header__banner-right .search-bar .search .search__icon {
+    position: absolute;
+    right: 20px;
+    font-size: 15px;
+    top: 15px;
+    cursor: pointer;
+}
+
+@media (max-width:600px) {
+    .header__banner-right .search-bar {
+        display: none;
+    }
+}
+
+/* dark/light switch */
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+}
+
+.mode-container {
+    width: 24px;
+    height: 24px;
+    padding: 1px 0;
+}
+
+.fa-moon,
+.fa-sun {
+    color: white;
+    font-size: 25px;
+}
+
+/* Light theme */
+#myBody {
+    background-color: white;
+}
+
+#switchButton .fa-sun {
+    display: none;
+}
+
+#switchButton .fa-moon {
+    display: block;
+}
+
+
+/* Dark Theme*/
+.dark#myBody {
+    background-color: #232220;
+    color: white;
+}
+
+.dark#p,
+.dark#h4 {
+    color: white;
+}
+
+
+.dark #switchButton .fa-sun {
+    display: block;
+    color: white;
+}
+
+
+.dark #switchButton .fa-moon {
+    display: none;
+}
+
+.dark #search__dark {
+    background-color: #232220;
+}
+
+/* Overlay style */
+.overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 99999;
+}
+
+/* Burger menu */
+button#trigger-overlay {
+    outline: none;
+    border: none;
+    background: none;
+    text-align: center;
+    color: #fbfdfb;
+    font-size: 1.95em;
+    padding: 0 8px;
+}
+
+/* Overlay style */
+.overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgb(6 3 0 / 77%);
+}
+
+/* Overlay closing cross */
+.overlay .overlay-close {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    overflow: hidden;
+    border: none;
+    background: #ff6600;
+    color: #fff;
+    border-radius: 6px;
+}
+
+/* Menu style */
+.overlay nav {
+	text-align: center;
+	position: relative;
+	top: 50%;
+	height: 60%;
+	transform: translateY(-50%);
+}
+.overlay ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	display: inline-block;
+	height: 100%;
+	position: relative;
+}
+.overlay ul li {
+	display: block;
+	backface-visibility: hidden;
+    line-height:3em;
+}
+.overlay ul li a {
+	font-size: 20px;
+	font-weight: 600;
+	display: block;
+	color: #fff;
+	transition: color 0.2s;
+    text-decoration: none;
+}
+
+.overlay ul li a:hover,
+.overlay ul li a:focus {
+	color: #ff6600;
+}
+
+
+/* Effect */
+.overlay-scale {
+	visibility: hidden;
+	opacity: 0;
+	transform: scale(0.9);
+	transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+    overflow: hidden;
+}
+
+.overlay-scale.open {
+	visibility: visible;
+	opacity: 1;
+	transform: scale(1);
+	transition: transform 0.4s, opacity 0.4s;
+}
+
+/* Reponsive */
+@media screen and (max-height: 30.5em) {
+	.overlay nav {
+		height: 70%;
+		font-size: 34px;
+	}
+
+	.overlay ul li {
+		min-height: 34px;
+	}
+}
+@media (max-width:767px) {
+	.overlay ul li a {
+		font-size: 16px;
+	}
+	.overlay ul li {
+		line-height: 2.5em;
+	}
+}
+@media (max-width:600px) {
+	.overlay ul li a {
+		font-size: 16px;
+	}
+	.overlay ul li {
+		line-height: 2.2em;
+	}
+}
+
+/* Header Info */
+.header-banner, .banner-info {
+    max-width: 600px;
+    text-align: left;
+    margin-top: 100px;
+}
+
+.header-banner, .banner-info h3 {
+    font-size: 54px;
+    line-height: 64px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.header-banner, .banner-info p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #fff;
+}
+
+.btn-whitee {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.btn-style, .btn-whitee {
+    padding: 12px 45px;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 700;
+    border-radius: 6px;
+}
+
+.banner-info a:hover{
+    color: #ff6600;
+    background-color: white;
+}
+
+/* About Us */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.title-1 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 1px;
+    color: #ff6600;
+    display: block;
+    font-family: 'Pacifico', cursive;
+}
+
+.title-2 {
+    font-size: 38px;
+    line-height: 48px;
+    font-weight: 600;
+}
+
+.content-right p{
+    font-size: 18px;
+    line-height: 28px;
+}
+
+/* Booking */
+.booking-block {
+    background: #ff6600;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.booking-block-image {
+    background: url(./img/banner3.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    min-height: 610px;
+
+}
+
+.booking-block-image::before {
+    content: "";
+    background: rgb(16 15 19 / 46%);
+    position: absolute;
+    top: 0;
+    min-height: 100%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.title-booking.txt {
+    color: #fff;
+}
+
+.title-booking {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 1px;
+    color: #ff6600;
+    display: block;
+    font-family: 'Pacifico', cursive;
+}
+
+.title-booking2 {
+    font-size: 38px;
+    line-height: 48px;
+    font-weight: 600;
+}
+
+.booking-block p {
+    color: #ffdfc9;
+}
+
+.booking-content2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 30px;
+    grid-gap: 30px;
+}
+
+.booking-content2-info .icon {
+    background: #fff;
+}
+
+.icon {
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    background: rgb(130,115,252,.05);
+    line-height: 70px;
+    border-radius: 6px;
+    transition: 0.3s ease-in-out;
+}
+
+.icon i {
+    color: #ff6600;
+    font-size: 25px;
+    line-height: 70px;
+}
+
+.icon i:hover{
+    color: #ffc600;
+}
+
+.booking-content2 .best {
+    display: block;
+    color: #232121;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.booking-content2-info .icon {
+    background: #fff;
+}
+
+/* Categories */
+
+.title-cate-1 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 1px;
+    color: #ff6600;
+    display: block;
+    font-family: 'Pacifico', cursive;
+}
+
+.title-cate-2 {
+    font-size: 38px;
+    line-height: 48px;
+    font-weight: 600;
+}
+
+.categories .card-img {
+    position: relative;
+}
+
+.categories .card-img img {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    border-radius: 6px;
+}
+
+.img-size {
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.categories .content-card .card-img:after {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.53) 69%, rgba(0, 0, 0, 0.76) 100%);
+    border-radius: 6px;
+}
+
+.categories .card-img:after {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    content: " ";
+    position: absolute;
+}
+
+.card-img:hover{
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+.categories .content-card .card-info {
+    opacity: 1;
+    transition: all 0.4s;
+}
+
+.categories .card-info {
+    left: auto;
+    bottom: 0;
+    width: 95%;
+    padding: 0 10px;
+    position: absolute;
+    opacity: 0;
+    color: #fff;
+    transform: translate3d(0, 10%, 0);
+    transition: opacity 0.3s;
+}
+
+.categories .content-card a h4 {
+    font-size: 22px;
+    line-height: 30px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.categories .content-card h6 {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 25px;
+    color: #fff;
+    opacity: 0.9;
+}
+
+.categories .card-info span {
+    font-weight: 600;
+    color: #ffc600;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+/* Menu */
+
+.menu-services {
+    position: relative;
+}
+
+.box-wrap {
+    padding: 40px 40px;
+    transition: all 0.5s ease 0s;
+    border-radius: 8px;
+    box-shadow: 0 25px 98px 0 rgb(0 0 0 / 3%);
+    position: relative;
+    border: 1px solid #eee;
+}
+
+.box-wrap-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 30px;
+}
+
+.menu-icon {
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    background: rgba(130,115,252,.05);
+    line-height: 70px;
+    border-radius: 6px;
+    transition: 0.3s ease-in-out;
+}
+
+.menu-services p{
+    line-height: 28px;
+    opacity: 0.8;
+}
+
+.menu-icon span.fa, span.fas {
+    color: #ff6600;
+    font-size: 25px;
+    line-height: 70px;
+   
+}
+
+.menu-icon:hover{
+    background-color: rgba(255,102,0,1);
+}
+
+.menu-icon span.fa:hover,.menu-icon span.fas:hover{
+    color:white;
+}
+
+
+.box-wrap h4 a {
+    color: black;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    display: block;
+}
+
+.box-wrap h4 a:hover{
+    color:#ff6600;
+}
+
 .delicious{
     position: relative;
     background-image: url(./img/banner2.jpg);
@@ -85,7 +755,6 @@ color: #f60;
 .number__item{
     gap: 30px;
     border-radius: 25px;
-   
     background-color: #232220;
     transition: all 0.5s;
 }
@@ -518,9 +1187,7 @@ left: 10px;
 
 
 
-.row{
-    padding-top: 20px;
-}
+
 
 .footer__video{
     object-fit: cover; /* object-fit: cover giúp hình hoặc video ko bị vỡ*/
