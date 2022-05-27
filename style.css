@@ -188,10 +188,47 @@ h1 a.logo-brand {
     display: block;
 }
 
+#delicious__number{
+    background-color: #fff;
+    color: black
+}
+
+.number__item2{
+    background-color: #fff;
+    color : black
+}
+
+#blog{
+    background-color: #f7f7f7;
+}
+
+#testimonials{
+    background-color: #ffffff;
+    color: #3c3a3a
+}
+
 
 /* Dark Theme*/
 .dark#myBody {
     background-color: #232220;
+    color: white;
+}
+
+.dark #blog{
+    background-color: #232220;
+    color: white;
+}
+
+.dark#delicious__number{
+    background-color: #232220;
+}
+
+.dark.number__item2{
+    background-color: #232220;
+}
+
+.dark #testimonials{
+    background-color: #282828;
     color: white;
 }
 
@@ -739,7 +776,7 @@ color: #f60;
 /* Number */
 
 .delicious__number{
-    background-color: #fff;
+    /* background-color: #fff; */
     margin-top: -70px;
 }
 
@@ -756,7 +793,7 @@ color: #f60;
 .number__item{
     gap: 30px;
     border-radius: 25px;
-    background-color: #fff;
+    background-color: #fff; 
     transition: all 0.5s;
 }
 
@@ -794,10 +831,9 @@ transform: translateY(-10%);
 
 /* Video1 */
 .diner__video{
-    background-color:#fff;
     height: 800px;
     padding-top: 150px;
-    
+
 }
 .vid__bg{
     background-image: url(./img/banner3.jpg);
@@ -953,9 +989,6 @@ left: 10px;
     color: #f60;
 } */
 
-#blog{
-    background-color: #f7f7f7;
-}
 
 .blog__title h5{
     font-family: 'Pacifico', cursive;
@@ -965,10 +998,9 @@ left: 10px;
 
 .blog__title h3{
     font-size: 45px;
-    color: #232220;
 }
 .card{
-    background-color: #f7f7f7;
+    /* background-color: #f7f7f7; */
     border: none;
 }
 .card__header {
@@ -983,7 +1015,7 @@ left: 10px;
     position: absolute;
     bottom: -8px;
     left: 10px;
-    color: white;
+    color: white; 
 }
 .post__pos p{
     background-color: #f60;
@@ -1031,15 +1063,15 @@ left: 10px;
 
 /* Testimonials */
 #testimonials{
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     height: 800px;
     overflow: hidden;
   
 }
 
-.testimonial__title {
+/* .testimonial__title {
     color: #232121;
-}
+} */
 
 .testimonial__title h2{
     color: #f60;
@@ -1053,7 +1085,7 @@ left: 10px;
 }
 
 .testimonial__content{
-    color: #3c3a3a;
+    /* color: #3c3a3a; */
     text-align: center;
 }
 
@@ -1069,7 +1101,7 @@ left: 10px;
 .content__item blockquote{
     font-size: 24px;
     line-height: 36px;
-    color: #3c3a3a;
+    /* color: #3c3a3a; */
     font-weight: 600;
 }
 
@@ -1082,7 +1114,7 @@ left: 10px;
 
 .content__item p{
     font-size: 18px;
-    color: #3c3a3a;
+    /* color: #3c3a3a; */
     font-family: 'Quicksand', sans-serif;
     width: 66%;
     margin-left: 18%;
